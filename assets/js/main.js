@@ -41,16 +41,94 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2000,
     delay: 200,
-//     reset: true
+    //     reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+/*===== DISCORD =====*/
+function copyDiscord() {
+    /* Get the text field */
+    var discordID = "M4hbod#1615"
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(discordID);
+  
+    /* Alert the copied text */
+    customAlert({
+        type: "success",
+        message: "Discord ID copied: " + discordID,
+        timer: 3500,
+    });
+  }
+
+  
+const customAlert = ({ type, message, timer = 5000 }) => {
+  return new Promise(resolve => {
+    const body = document.querySelector('body');
+
+    let templateContainer = document.querySelector('.alert-container');
+
+    if (!templateContainer) {
+      body.insertAdjacentHTML(
+        'afterend',
+        '<div class="alert-container"></div>',
+      );
+      templateContainer = document.querySelector('.alert-container');
+    }
+
+    const alertId = id();
+
+    const templateContent = `
+    <div class="alert-content ${type}-bg" id="${alertId}-alert-content">
+      <div>
+        <div class="alert-frame">
+          <div class="alert-body">
+            <div class="alert-body-content">
+              <span class="alert-message">${message}</span>
+            </div>
+            <div class="alert-close" id="${alertId}-alert-close">X</div>
+          </div>
+        </div>
+        <div class="alert-timer ${type}-timer"  style="animation: timer${timer}ms linear;>
+      </div>
+    </div>
+    `;
+
+    const alerts = document.querySelectorAll('.alert-content');
+
+    if (alerts.length) {
+      alerts[0].insertAdjacentHTML('beforebegin', templateContent);
+    } else {
+      templateContainer.innerHTML = templateContent;
+    }
+
+    const alertContent = document.getElementById(`${alertId}-alert-content`);
+
+    setTimeout(() => {
+      alertContent.remove();
+      resolve();
+    }, timer);
+
+    const alertClose = document.getElementById(`${alertId}-alert-close`);
+
+    alertClose.addEventListener('click', () => {
+      alertContent.remove();
+      resolve();
+    });
+  });
+};
+  
+const id = () => {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
