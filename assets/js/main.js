@@ -59,7 +59,7 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 /*===== DISCORD =====*/
 function copyDiscord() {
     /* Get the text field */
-    var discordID = "M4hbod#1615"
+    var discordID = "m4hbod"
   
      /* Copy the text inside the text field */
     navigator.clipboard.writeText(discordID);
