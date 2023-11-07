@@ -1,70 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="assets/img/icon.png">
-        <link rel="stylesheet" href="assets/css/styles.min.css">
-        <title>M4hboDD</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Mahbod Nasiri" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#986DFF" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+        <script src="assets/js/svg-inject.min.js"></script>
+        <title>M4hbod's Portfolio</title>
     </head>
+
     <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Mahbod</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="https://github.com/M4hbod" class="nav__link active">Github</a></li>
+        <header>
+            <div class="grid-layout">
+                <nav>
+                    <a href="https://mahbod.link"
+                        ><img
+                            src="assets/image/code.svg"
+                            alt="code"
+                            width="150px"
+                            height="25px"
+                    /></a>
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="#s-home">Introduction</a></li>
+                        <li><a href="#s-about">About Me</a></li>
+                        <li>
+                            <a href="#s-projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#s-skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#s-contact">Contact Me</a>
+                        </li>
                     </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Mahbod</span><br> The Monkey</h1>
-                </div>
+        <main>
+            <section id="s-home">
+                <div class="grid-layout">
+                    <div id="home">
+                        <div id="home-container-text">
+                            <h1 class="delayMediumReveal">
+                                Hi there! I'm Mahbod. A Junior
+                                <span>Python Developer</span>.
+                            </h1>
+                            <p class="delayLargeReveal typewriter">
+                                I have expertise in Python, with a focus on
+                                FastAPI for backend development. I also have
+                                experience with Ant Design and front-end design
+                                using React. Additionally, I have spent many
+                                hours working with Pyrogram. My skills extend to
+                                HTML, CSS, Docker, and MongoDB.
+                            </p>
 
-                <div class="home__social">
-                    <a href="https://github.com/M4hbod" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    <a href="https://t.me/M4hbod" class="home__social-icon"><i class='bx bxl-telegram' ></i></a>
-                    <a href="https://instagram.com/M4hboDD" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://steamcommunity.com/id/M4hbod" class="home__social-icon"><i class='fa fa-steam' ></i></a>
-                    <a onclick="copyDiscord()" class="home__social-icon"><i class='bx bxl-discord' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="40" y="80" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
+                            <a
+                                href="mahbod-nasiri.pdf"
+                                rel="noopener"
+                                target="_blank"
+                                class="delayExtraBigReveal"
+                            >
+                                Download My CV
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <section id="s-about">
+                <div class="grid-layout">
+                    <div>
+                        <div id="creator-photo" class="delayMediumReveal"></div>
+                        <div>
+                            <h2 class="delaySmallReveal">About Me</h2>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.min.js"></script>
+                            <p class="delayLargeReveal">
+                                I am a dedicated self-taught python developer
+                                with over a year of experience. Recently, I have
+                                embarked on expanding my expertise by exploring
+                                FastAPI and diving into the world of Web
+                                development. My passion for web development
+                                extends beyond my primary focus areas, as I
+                                enjoy creating Telegram bots and utilizing
+                                various tools to enhance my projects. <br />
+                                Throughout my journey, I have had the privilege
+                                of working with diverse groups, each bringing
+                                their own unique perspectives, talents, and
+                                backgrounds. This diverse range of experiences
+                                has not only expanded my perspective but also
+                                allowed me to actively contribute to multiple
+                                open-source projects on GitHub.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="s-projects">
+                <div class="grid-layout">
+                    <h2 class="delaySmallReveal">Projects <span></span></h2>
+                    <div id="projects">
+                        <article
+                            class="intervalCardReveal teslabank"
+                            style="min-height: 364px"
+                        >
+                            <h3>Artemis Music</h3>
+                            <p>
+                                A Telegram bot that plays music and videos from
+                                YouTube, Spotify, Deezer, Instagram, and more.
+                                It uses Pyrogram, py-tgcalls for Telegram,
+                                MongoDB for the database, and FFmpeg for video
+                                processing.
+                            </p>
+                        </article>
+                        <article
+                            class="intervalCardReveal naped"
+                            style="min-height: 364px"
+                        >
+                            <h3>Username Attacher</h3>
+                            <p>
+                                An open-source Telegram bot that automatically
+                                adds channel usernames to posts in various
+                                formats. It uses Pyrogram for Telegram handling
+                                and MongoDB for the database.
+                            </p>
+
+                            <a
+                                href="https://github.com/M4hbod/UsernameAttacher/"
+                                rel="noopener"
+                                target="_blank"
+                                id="naped"
+                                >Visit
+                            </a>
+                        </article>
+                        <article
+                            class="intervalCardReveal efront"
+                            style="min-height: 364px"
+                        >
+                            <h3>Nyx Shorts Maker</h3>
+                            <p>
+                                A Telegram bot that utilizes OpenAI's "whisper"
+                                models to generate short videos with
+                                customizable subtitles and trend-spotting
+                                capabilities. Ideal for enhancing content on
+                                popular platforms such as Instagram.
+                            </p>
+                        </article>
+                    </div>
+                    <a
+                        href="https://github.com/M4hbod?tab=repositories"
+                        rel="noopener"
+                        target="_blank"
+                        class="delayExtraBigReveal"
+                        >View all Repositories</a
+                    >
+                </div>
+            </section>
+
+            <section id="s-skills">
+                <div class="grid-layout">
+                    <div id="skills">
+                        <article id="skills-text">
+                            <h2 class="delaySmallReveal">
+                                Skills <span></span>
+                            </h2>
+                            <p class="delayMediumReveal changeDescription">
+                                I have recently been actively engaged in various
+                                projects, where I have gained significant
+                                experience working with cutting-edge
+                                technologies. These technologies include:
+                            </p>
+                        </article>
+
+                        <div id="skills-cards">
+                            <article class="python intervalCardReveal">
+                                <img
+                                    src="assets/icons/python.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Python"
+                                />
+                            </article>
+                            <article class="scrapy intervalCardReveal">
+                                <img
+                                    src="assets/icons/scrapy.png"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Scrapy"
+                                />
+                            </article>
+                            <article class="fastapi intervalCardReveal">
+                                <img
+                                    src="assets/icons/fastapi.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="FastAPI"
+                                />
+                            </article>
+                            <article class="pyrogram intervalCardReveal">
+                                <img
+                                    src="assets/icons/pyrogram.png"
+                                    width="50px"
+                                    height="50px"
+                                    alt="Pyrogram"
+                                />
+                            </article>
+                            <article class="mongo intervalCardReveal">
+                                <img
+                                    src="assets/icons/mongodb.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Mongo"
+                                />
+                            </article>
+                            <article class="redis intervalCardReveal">
+                                <img
+                                    src="assets/icons/redis.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Redis"
+                                />
+                            </article>
+                            <article class="docker intervalCardReveal">
+                                <img
+                                    src="assets/icons/docker.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Docker"
+                                />
+                            </article>
+
+                            <article class="git intervalCardReveal">
+                                <img
+                                    src="assets/icons/git.svg"
+                                    width="60px"
+                                    height="60px"
+                                    alt="Git"
+                                />
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="s-contact">
+                <section id="s-skills">
+                    <div class="grid-layout">
+                        <div id="skills">
+                            <article id="skills-text">
+                                <h2 class="delaySmallReveal">
+                                    Contact Options <span></span>
+                                </h2>
+                                <p class="delayMediumReveal changeDescription">
+                                    If you have any business inquiries or
+                                    questions, I would be delighted to connect
+                                    with you. Please feel free to reach out to
+                                    me through the this links:
+                                </p>
+                            </article>
+
+                            <div id="skills-cards">
+                                <article
+                                    class="python intervalCardRevealContact"
+                                >
+                                    <a
+                                        href="mailto:M4hbod@proton.me"
+                                        rel="noopener"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./assets/icons/proton.svg"
+                                            rel="noopener"
+                                            alt="Email"
+                                            onload="SVGInject(this)"
+                                    /></a>
+                                </article>
+                                <article
+                                    class="linkesin intervalCardRevealContact"
+                                >
+                                    <a
+                                        href="https://www.linkedin.com/in/M4hbod/"
+                                        rel="noopener"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./assets/icons/linkedin.svg"
+                                            rel="noopener"
+                                            alt="LinkedIn"
+                                            onload="SVGInject(this)"
+                                    /></a>
+                                </article>
+                                <article
+                                    class="github intervalCardRevealContact"
+                                >
+                                    <a
+                                        href="https://github.com/M4hbod"
+                                        rel="noopener"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./assets/icons/github.svg"
+                                            rel="noopener"
+                                            alt="GitHub"
+                                            onload="SVGInject(this)"
+                                        />
+                                    </a>
+                                </article>
+                                <article
+                                    class="telegram intervalCardRevealContact"
+                                >
+                                    <a
+                                        href="https://t.me/M4hbod"
+                                        rel="noopener"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="assets/icons/telegram.svg"
+                                            rel="noopener"
+                                            alt="Telegram"
+                                            onload="SVGInject(this)"
+                                        />
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <footer>
+                <div class="grid-layout">
+                    <p>
+                        Copyright © 2023. No rights reserved. Code was stolen by
+                        <a href="https://mohamad-liyaghi.me/"
+                            >Mohamad Liyaghi</a
+                        >
+                        and Mahbod Nasiri.
+                    </p>
+                </div>
+            </footer>
+        </main>
+
+        <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+        <script type="module" src="assets/js/main.js"></script>
     </body>
 </html>
